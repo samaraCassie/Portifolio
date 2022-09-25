@@ -1,45 +1,50 @@
-* {
-    box-sizing: border-box;
+  * {
+    
   }
-  
-  /* Style the header */
-  .perfil {
-    background-color: #f1f1f1;
-    padding: 10px;
-    height: 35vh;
-    font-size: 50px;
-    text-align: center;
-  }
-  
-  /* Create three unequal columns that floats next to each other */
-  .column {
-    float: left;
-    padding: 10px;
-    height: 50vh; /* Should be removed. Only for demonstration */
-    font-size: 20px;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  /* Left and right column */
-  .column.side {
-    width: 15%;
-  }
-  
-  /* Middle column */
-  .column.middle {
-    width: 70%;
-  }
-  
 
-  /* Style the footer */
-  .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    height: 10vh;
+  .container-grid {
+    background-color: grey;
+    border: 2px solid black;
+    padding: 15px;
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+      'header header header header header header'
+      'sidebar content content content content content'
+      'footer footer footer footer footer footer';
+  }
+  #header {
+    grid-area: header;
+    height: 20vh;
+    display: flex;
+  }
+  #sidebar {
+    grid-area: sidebar;
+    height: 50vh;
     text-align: center;
   }
-  
+  #content {
+    grid-area: content;
+  }
+  #footer {
+    grid-area: footer;
+    text-align: center;
+  }
+
+  .container-grid div {
+    background-color: rgb(222, 222, 222);
+    padding: 20px;
+    border: 2px solid black;
+  }
+
+  .imagem-perfil {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    
+  }
+
+
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media (max-width: 600px) {
     .column.side{

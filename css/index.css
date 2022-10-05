@@ -1,57 +1,64 @@
   * {
-    
+    color: white;
+  }
+
+  body {
+    background-color: rgb(25, 25, 25);
   }
 
   .container-grid {
-    background-color: grey;
-    border: 2px solid black;
+    background-color: rgb(25, 25, 25);
     padding: 15px;
     display: grid;
     gap: 5px;
-    grid-template-areas: 
+    grid-template-areas:
       'header header header header header header'
       'sidebar content content content content content'
       'footer footer footer footer footer footer';
   }
+
   #header {
     grid-area: header;
-    height: 20vh;
+    height: 80vh;
     display: flex;
   }
+
   #sidebar {
     grid-area: sidebar;
-    height: 50vh;
+    height: 75vh;
     text-align: center;
   }
+
   #content {
     grid-area: content;
   }
+
   #footer {
     grid-area: footer;
     text-align: center;
   }
 
   .container-grid div {
-    background-color: rgb(222, 222, 222);
+    background-color: rgb(40, 40, 40);
     padding: 20px;
-    border: 2px solid black;
   }
 
   .imagem-perfil {
     width: 20vh;
     height: 20vh;
     border-radius: 100%;
-    
+
   }
 
 
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
   @media (max-width: 600px) {
-    .column.side{
-    height: 5vh;
-    width: 100%;
-    } 
+    .column.side {
+      height: 5vh;
+      width: 100%;
+    }
+
     .column.middle {
       width: 100%;
     }
-}
+  }
